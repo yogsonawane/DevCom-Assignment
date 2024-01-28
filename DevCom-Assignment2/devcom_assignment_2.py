@@ -59,7 +59,7 @@ class SyncService:
 def testSyncing():
     devices = [Device(f"dev_{i}") for i in range(10)]
     syn = SyncService()
-    _N = int(1e4)
+    _N = int(1e6)
     for i in range(_N):
         for _dev in devices:
             syn.onMessage(_dev.obtainData())
@@ -82,5 +82,3 @@ def assertEquivalent(d1:dict, d2:dict):
     assert d1['timestamp'] == d2['timestamp']
     for kee in _DATA_KEYS:
         assert d1['data'][kee] == d2['data'][kee]
-
-testSyncing()
