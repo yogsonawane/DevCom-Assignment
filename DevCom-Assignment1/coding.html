@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="styles/coding.css">
+</head>
+<body>
+    <div class="codingback">
+        <!-- <img src="/images/vscode-layout.png"> -->
+    </div>
+    <div id="codingtext"></div>
+    <button class="homebutton" onclick="location.href='/index.html'" style="top: 2.6%;left: 25%;"> &lt</i></button>
+    <button class="homebutton" style="top: 2.6%; left: 28%">&gt</button>
+    <script src="/scripts/typeit.js"></script>
+    <script>
+        function changeFontWidth(){
+            x=window.innerWidth;
+            size = x/1920 * 45;
+            document.getElementById("codingtext").style.fontSize = size+"px";
+            document.getElementById("codingtext").style.lineHeight = ( 1 + (0.174 * x / 1920)) + "em";
+
+            let ele= document.getElementsByClassName("homebutton")
+            
+            for (const el of ele){
+                el.style.fontSize = size + "px";
+                el.style.top = (2.6*x/1920) + "%";
+            }
+        }
+        setInterval(changeFontWidth, 10)
+    </script>
+</body>
+</html>

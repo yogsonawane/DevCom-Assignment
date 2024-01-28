@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT ME</title>
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<div class="contactback">
+</div>
+<body>
+    <header>
+        <button class="buttons" type="button" onclick="location.href='/index.html'">HOME</button>
+    </header>
+    <div class="container">
+        
+        <form action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="073fc78c-d628-4c5e-9348-2b95ae0110aa">
+        
+            <textarea name="from" placeholder="NAME" class="from" required></textarea>
+            <br>
+            <br>
+
+            <textarea name="email" placeholder="EMAIL" class="email" required></textarea>
+            <br>
+            <br>
+
+            <textarea name="message" placeholder="YOUR MESSAGE..." class="message" required></textarea>
+            <button type="submit" class="submitbutton">SUBMIT</button>
+        </form>
+    </div>
+        
+        <script src="https://web3forms.com/client/script.js" async defer></script>
+    </div>
+    
+</body>
+</html>
